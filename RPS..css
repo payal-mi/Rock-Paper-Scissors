@@ -1,73 +1,105 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  text-align:center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+body {
   font-family: Arial, sans-serif;
+  background-color: #53b6b8;
 }
 
-body{
-  background:#f4f4f4;
+h1 {
+  background-color: black;
+  color: white;
+  height: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
 }
 
-h1{
-  background:black;
-  color:white;
-  height:5rem;
-  line-height:5rem;
+.choices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 2rem;
 }
 
-.choices{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:3rem;
-  margin-top:3rem;
-  flex-wrap:wrap;
+.choice {
+  height: 165px;
+  width: 165px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
 }
 
-.choice{
-  height:165px;
-  width:165px;
-  border-radius:50%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  transition:0.3s;
+.choice:hover {
+  background-color: rgb(58, 38, 11);
+  cursor: pointer;
 }
 
-.choice:hover{
-  background:#444;
-  cursor:pointer;
+.choice img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-.choice img{
-  height:150px;
-  width:150px;
-  border-radius:50%;
-  object-fit:cover;
+.score-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  font-size: 1.5rem;
 }
 
-.score-board{
-  display:flex;
-  justify-content:center;
-  gap:4rem;
-  margin-top:3rem;
-  font-size:2rem;
+.score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#user-score,#comp-score{
-  font-size:4rem;
+#user-score,
+#comp-score {
+  font-size: 2.5rem;
+  font-weight: bold;
 }
 
-.msg-container{
-  margin-top:3rem;
+.score-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-#msg{
-  background:#033042;
-  color:white;
-  font-size:1.5rem;
-  padding:1rem 2rem;
-  border-radius:1rem;
+#reset-btn {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #070808;
+  color: white;
+  cursor: pointer;
+}
+
+#draw-count {
+  font-weight: bold;
+}
+
+.msg-container {
+  margin-top: 2rem;
+}
+
+#msg {
+  background-color: rgb(3, 48, 66);
+  color: white;
+  font-size: 1.5rem;
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 1rem;
 }
