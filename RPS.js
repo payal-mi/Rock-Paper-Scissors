@@ -9,14 +9,14 @@ const compScorePara = document.querySelector("#comp-score");
 const drawCountPara = document.querySelector("#draw-count");
 const resetBtn = document.querySelector("#reset-btn");
 
-// Generate computer choice
+
 const genCompChoice = () => {
   const option = ["rock", "paper", "scissors"];
   const randidx = Math.floor(Math.random() * 3);
   return option[randidx];
 };
 
-// Draw game
+
 const drawGame = () => {
   drawCount++;
   drawCountPara.innerText = drawCount;
@@ -24,7 +24,7 @@ const drawGame = () => {
   msg.style.backgroundColor = "#033042";
 };
 
-// Show winner
+
 const showWinner = (userWin, userChoice, compChoice) => {
   if (userWin) {
     userScore++;
@@ -39,7 +39,7 @@ const showWinner = (userWin, userChoice, compChoice) => {
   }
 };
 
-// Play game
+
 const playGame = (userChoice) => {
   const compChoice = genCompChoice();
 
@@ -58,7 +58,7 @@ const playGame = (userChoice) => {
   }
 };
 
-// Event listeners for choices
+
 choices.forEach((choice) => {
   choice.addEventListener("click", () => {
     const userChoice = choice.getAttribute("id");
@@ -66,7 +66,7 @@ choices.forEach((choice) => {
   });
 });
 
-// Reset scores
+
 resetBtn.addEventListener("click", () => {
   userScore = 0;
   compScore = 0;
@@ -77,3 +77,4 @@ resetBtn.addEventListener("click", () => {
   msg.innerText = "Scores Reset! Play Again";
   msg.style.backgroundColor = "#033042";
 });
+
